@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.erdlet.mvn.plugin.migration.filename;
-
-import java.time.format.DateTimeFormatter;
+package de.erdlet.migrationgeneratorplugin;
 
 /**
- * Interface for defining a provider which creates timestamps as string.
+ * Collection of base dirs where migration tools place their migration files.
+ * Thos directories can be overwritten by a Mojo parameter in case someone
+ * has a custom directory structure.
  */
-interface TimestampProducer {
+public final class TargetDirectory {
 
-  final DateTimeFormatter DEFAULT_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
-
-  /**
-   * Produces the timestamp based on either the {@link #DEFAULT_FORMATTER} or
-   * something implementation specific.
-   * 
-   * @return the formatted timestamp string
-   */
-  public String produce();
+  public static final String FLYWAY = "src/main/resources/db/migration";
 }

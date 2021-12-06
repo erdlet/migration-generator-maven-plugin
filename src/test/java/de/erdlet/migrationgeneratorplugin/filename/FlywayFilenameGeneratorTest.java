@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.erdlet.mvn.plugin.migration.filename;
+package de.erdlet.migrationgeneratorplugin.filename;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
@@ -25,6 +25,10 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
+
+import de.erdlet.migrationgeneratorplugin.filename.FlywayFilenameGenerator;
+import de.erdlet.migrationgeneratorplugin.filename.GeneratorContext;
+import de.erdlet.migrationgeneratorplugin.filename.TimestampProducer;
 
 public class FlywayFilenameGeneratorTest {
 

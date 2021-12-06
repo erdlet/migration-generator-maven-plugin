@@ -13,14 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.erdlet.mvn.plugin.migration;
+package de.erdlet.migrationgeneratorplugin;
 
 /**
- * Collection of base dirs where migration tools place their migration files.
- * Thos directories can be overwritten by a Mojo parameter in case someone
- * has a custom directory structure.
+ * Contains all 3rd party tools whose migration files can be generated with this plugin.
  */
-public final class TargetDirectory {
-
-  public static final String FLYWAY = "src/main/resources/db/migration";
+public final class SupportedTools {
+  
+  public static final String FLYWAY = "flyway";
 }

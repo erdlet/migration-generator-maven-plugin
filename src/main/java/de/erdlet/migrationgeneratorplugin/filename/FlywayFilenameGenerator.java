@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.erdlet.mvn.plugin.migration.filename;
+package de.erdlet.migrationgeneratorplugin.filename;
 
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import de.erdlet.mvn.plugin.migration.VersionScheme;
+import de.erdlet.migrationgeneratorplugin.VersionScheme;
 
 /**
  * <p>

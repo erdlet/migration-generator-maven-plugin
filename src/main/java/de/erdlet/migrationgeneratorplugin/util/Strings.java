@@ -13,13 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.erdlet.mvn.plugin.migration;
+package de.erdlet.migrationgeneratorplugin.util;
 
-import org.apache.maven.plugin.testing.MojoRule;
-import org.junit.Rule;
+public final class Strings {
+  
+  private static final String EMPTY_STRING = "";
 
-public class MigrationGenerationMojoTest {
+  public static boolean isBlank(final String value) {
+    return value == null || value.trim().isEmpty();
+  }
 
-    @Rule
-    public MojoRule rule = new MojoRule();
+  public static boolean isNotBlank(final String value) {
+    return value != null && !value.trim().isEmpty();
+  }
+
+  public static String valueOrEmptyString(final String value) {
+    return isBlank(value) ? EMPTY_STRING : value;
+  }
+
+  private Strings() {}
 }

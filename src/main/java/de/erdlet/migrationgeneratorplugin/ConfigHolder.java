@@ -13,12 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.erdlet.mvn.plugin.migration;
+package de.erdlet.migrationgeneratorplugin;
 
 /**
- * Contains all 3rd party tools whose migration files can be generated with this plugin.
+ * Holds config which is common to potentially all classes. This is e.g. a debug
+ * flag.
  */
-public final class SupportedTools {
-  
-  public static final String FLYWAY = "flyway";
+public final class ConfigHolder {
+
+  private static ConfigHolder INSTANCE;
+
+  public static ConfigHolder getInstance() {
+    if (INSTANCE == null) {
+      INSTANCE = new ConfigHolder();
+    }
+
+    return INSTANCE;
+  }
+
+  private boolean debug;
+
+  public void setDebug(boolean debug) {
+    this.debug = debug;
+  }
+
+  public boolean isDebug() {
+    return debug;
+  }
+
+  private ConfigHolder() {
+  }
 }

@@ -13,16 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.erdlet.mvn.plugin.migration.filename;
+package de.erdlet.migrationgeneratorplugin.filename;
+
+import java.time.format.DateTimeFormatter;
 
 /**
- * Dummy implementation which can be used in case the plugin's debug mode is
- * enabled.
+ * Interface for defining a provider which creates timestamps as string.
  */
-public final class DummyTimestampProducer implements TimestampProducer {
+interface TimestampProducer {
 
-  @Override
-  public String produce() {
-    return "20211206120000";
-  }
+  final DateTimeFormatter DEFAULT_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+
+  /**
+   * Produces the timestamp based on either the {@link #DEFAULT_FORMATTER} or
+   * something implementation specific.
+   * 
+   * @return the formatted timestamp string
+   */
+  public String produce();
 }

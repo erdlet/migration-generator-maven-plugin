@@ -13,12 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.erdlet.mvn.plugin.migration.filename;
+package de.erdlet.migrationgeneratorplugin;
 
 /**
- * Generic Interface for the classes generating parts of the migration files.
+ * Definition of the version a migration script has. Most of the tools use
+ * something like a number (e.g. {@code V001}) or a timestamp
+ * (e.g. {@code 20211206110056}) as unique identifier for a migration.
+ * Nevertheless, one may want to use none of those schemas,
+ * so the {@link MigrationGenerationMojo} has a parameter which allows to set
+ * the version manually which bypasses this predefined schema.
  */
-public interface Generator {
+public final class VersionScheme {
 
-  public String generate(final GeneratorContext ctx);
+  public static final String NUMBER = "number";
+  public static final String TIMESTAMP = "timestamp";
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.erdlet.mvn.plugin.migration;
+package de.erdlet.migrationgeneratorplugin;
 
 import java.io.IOException;
 
@@ -24,7 +24,7 @@ import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
-import de.erdlet.mvn.plugin.migration.util.Strings;
+import de.erdlet.migrationgeneratorplugin.util.Strings;
 
 /**
  * The {@link MigrationGenerationMojo} provides the

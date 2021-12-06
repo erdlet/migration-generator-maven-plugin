@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.erdlet.mvn.plugin.migration;
+package de.erdlet.migrationgeneratorplugin;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import de.erdlet.mvn.plugin.migration.filename.Filename;
+import de.erdlet.migrationgeneratorplugin.filename.Filename;
 
 public final class MigrationFile {
 

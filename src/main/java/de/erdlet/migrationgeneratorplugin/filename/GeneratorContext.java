@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.erdlet.mvn.plugin.migration.filename;
+package de.erdlet.migrationgeneratorplugin.filename;
 
-import de.erdlet.mvn.plugin.migration.util.Strings;
+import de.erdlet.migrationgeneratorplugin.util.Strings;
 
 /**
  * Context class containing all necessary information for the underlaying generators.

@@ -13,23 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.erdlet.mvn.plugin.migration.util;
+package de.erdlet.migrationgeneratorplugin.filename;
 
-public final class Strings {
-  
-  private static final String EMPTY_STRING = "";
+/**
+ * Generic Interface for the classes generating parts of the migration files.
+ */
+public interface Generator {
 
-  public static boolean isBlank(final String value) {
-    return value == null || value.trim().isEmpty();
-  }
-
-  public static boolean isNotBlank(final String value) {
-    return value != null && !value.trim().isEmpty();
-  }
-
-  public static String valueOrEmptyString(final String value) {
-    return isBlank(value) ? EMPTY_STRING : value;
-  }
-
-  private Strings() {}
+  public String generate(final GeneratorContext ctx);
 }
