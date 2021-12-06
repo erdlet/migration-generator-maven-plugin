@@ -21,6 +21,20 @@ jobs:
         cache: maven
     - name: Compile with Maven
       run: mvn -B compile --file pom.xml
+  copyright-header-test:
+    needs: compile
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 17
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17'
+        distribution: 'adopt'
+        cache: maven
+    - name: Compile with Maven
+      run: mvn -B license:check --file pom.xml
   unit-tests:
     needs: compile
     runs-on: ubuntu-latest
@@ -36,7 +50,7 @@ jobs:
     - name: Compile with Maven
       run: mvn -B test --file pom.xml
   integration-tests:
-    needs: unit-tests
+    needs: [unit-tests, copyright-header-test]
     runs-on: ubuntu-latest
 
     steps:
