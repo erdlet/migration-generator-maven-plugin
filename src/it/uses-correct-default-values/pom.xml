@@ -4,10 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>de.erdlet.mvn.plugin.it</groupId>
-  <artifactId>writes-correct-start-debug-log</artifactId>
+  <artifactId>uses-correct-default-values</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <description>Ensures the correct start messages is written for debug mode.</description>
+  <description>Ensures the plugin has a default description.</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

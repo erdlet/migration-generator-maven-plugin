@@ -1,0 +1,1 @@
+new File( basedir, 'src/main/resources/db/migration' ).mkdirs();
