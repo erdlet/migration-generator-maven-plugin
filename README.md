@@ -2,11 +2,6 @@
 
 This plugin does the tedious work of creating the files for new database migrations by hand. In the future it will hopefully support several tools like Flyway, MyBatis Migrations or Liquibase.
 
-## Current TODOs
-
-- [ ] Build release
-- [ ] Push to Maven Central
-
 ## General usage
 
 To use the plugin just add it into your `pom.xml` like this:
